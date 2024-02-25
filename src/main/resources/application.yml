@@ -12,6 +12,12 @@ spring:
       hibernate:
         # show_sql: true
         format_sql: true
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+        one-indexed-parameters: true # page 1부터 시작 하지만 pageable 에서는 그대로 0부터 시작. 그냥 0부터 시작하든지 custom 을 해야 한다
 
 logging.level:
   org.hibernate.SQL: debug
